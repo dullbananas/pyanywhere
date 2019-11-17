@@ -24,7 +24,7 @@ copyright = '2019, Dull Bananas'
 author = 'Dull Bananas'
 
 # The short X.Y version
-version = ''
+version = '0.0'
 # The full version, including alpha/beta/rc tags
 release = '0.0.0'
 
@@ -33,7 +33,7 @@ release = '0.0.0'
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-# needs_sphinx = '1.0'
+needs_sphinx = '1.7'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom

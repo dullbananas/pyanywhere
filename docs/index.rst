@@ -1,20 +1,25 @@
-.. pyanywhere documentation master file, created by
-   sphinx-quickstart on Sat Nov 16 18:24:01 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Welcome to pyanywhere
+=====================
 
-Welcome to pyanywhere's documentation!
-======================================
+
+Tutorial
+--------
+
+These pages contain a brief overview of how this module works.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   
+   introduction
 
 
+API Reference
+-------------
 
-Indices and tables
-==================
+Coming soon
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+
+Links
+-----
+
+- `GitHub repository <https://github.com/dullbananas/pyanywhere>`_
