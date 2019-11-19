@@ -2,8 +2,8 @@ Welcome to pyanywhere
 =====================
 
 
-Tutorial
---------
+Get Started
+-----------
 
 These pages contain a brief overview of how this module works.
 
@@ -11,6 +11,7 @@ These pages contain a brief overview of how this module works.
    :maxdepth: 2
    
    introduction
+   consoles
 
 
 API Reference

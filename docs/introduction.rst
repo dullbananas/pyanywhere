@@ -22,7 +22,8 @@ accepts two arguments: the username and the API token::
    >>> from pyanywhere.users import User
    >>> user = User('username', 'XXXXXXX')
 
-This is how you access your consoles::
+Like I said earlier, this object is necessaary to access other things. For
+example, this is how you print the names of all your consoles::
 
    >>> for console in user.get_consoles():
    ...     print(console.name)
