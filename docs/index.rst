@@ -17,7 +17,10 @@ These pages contain a brief overview of how this module works.
 API Reference
 -------------
 
-Coming soon
+.. toctree::
+   :maxdepth: 2
+   
+   users
 
 
 Links
