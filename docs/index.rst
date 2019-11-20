@@ -20,7 +20,7 @@ API Reference
 .. toctree::
    :maxdepth: 2
    
-   users
+   api
 
 
 Links

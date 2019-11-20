@@ -7,6 +7,16 @@ import requests
 
 
 class User:
+	'''The User class represents a PythonAnywhere user. It is the central object
+	because it has to be used in order to access anything else. When running this
+	module from PythonAnywhere, the :func:`pyanywhere.users.get_current_user` function can
+	be used to automatically generate this object.
+	
+	:param name: The username.
+	
+	:param token: The API token that is associated with the user.
+	'''
+	
 	__slots__ = (
 		'name', 'token', 'endpoint',
 	)
@@ -41,12 +51,33 @@ class User:
 			)
 	
 	def get_consoles(self):
+		'''This method gets the consoles that are running on the user.
+		
+		:return: A geterator yielding :class:`pyanywhere.consoles.Console`
+		         objects.
+		'''
 		return self._list_consoles('/consoles/')
 	
 	def get_shared_consoles(self):
+		'''A variant of :meth:`get_consoles` that yields consoles shared with the
+		user.
+		'''
 		return self._list_consoles('/consoles/shared_with_you/')
 	
 	def start_console(self, exec_name, args, working_dir):
+		'''This method starts a new console.
+		
+		:param exec_name: The name of the executable used for the console. For
+		                  example, you can set this to ``'bash'`` to start a Bash
+		                  console.
+		
+		:param args: The command line arguments passed to ``exec_name``. This
+		             must be a string.
+		
+		:param working_dir: The initial working directory of the console.
+		
+		:return: A :class:`pyanywhere.consoles.Console` object.
+		'''
 		response = self._request('post', '/consoles/', data={
 			'executable': exec_name,
 			'arguments': args,
@@ -65,6 +96,11 @@ class User:
 
 
 def get_current_user():
+	'''This function can be used to return a :class:`pyanywhere.users.User` object if this
+	module is running on PythonAnyhwere. It gets your username by getting your
+	Linux username, and it gets your API token from the ``API_TOKEN`` environment
+	variable.
+	'''
 	name = getpass.getuser()
 	token = os.getenv('API_TOKEN', None)
 	return User(name=name, token=token)
