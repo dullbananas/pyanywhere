@@ -12,3 +12,4 @@ for console in user.get_consoles():
 
 ## Links
   * GitHub: https://github.com/dullbananas/pyanywhere
+  * Documentation: https://pyanywhere.readthedocs.io/en/latest/
